@@ -210,8 +210,8 @@ function exit-script() {
 function default_settings() {
   VMID=$NEXTID
   HN=openwrt
-  CORE_COUNT="1"
-  RAM_SIZE="256"
+  CORE_COUNT="2"
+  RAM_SIZE="512"
   BRG="vmbr0"
   VLAN=""
   MAC=$GEN_MAC
@@ -448,7 +448,7 @@ msg_ok "Virtual Machine ID is ${CL}${BL}$VMID${CL}."
 msg_info "Getting URL for OpenWrt Disk Image"
 
 response=$(curl -s https://openwrt.org)
-stableversion=$(echo "$response" | sed -n 's/.*Current stable release - OpenWrt \([0-9.]\+\).*/\1/p' | head -n 1)
+#stableversion=$(echo "$response" | sed -n 's/.*Current stable release - OpenWrt \([0-9.]\+\).*/\1/p' | head -n 1)
 #URL="https://downloads.openwrt.org/releases/$stableversion/targets/x86/64/openwrt-$stableversion-x86-64-generic-ext4-combined.img.gz"
 URL="https://downloads.immortalwrt.org/releases/23.05.4/targets/x86/64/immortalwrt-23.05.4-x86-64-generic-ext4-combined.img.gz"
 
