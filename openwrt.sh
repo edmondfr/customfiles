@@ -209,7 +209,7 @@ function exit-script() {
 
 function default_settings() {
   VMID=$NEXTID
-  HN=openwrt
+  HN=immortalwrt
   CORE_COUNT="2"
   RAM_SIZE="512"
   BRG="vmbr0"
@@ -221,7 +221,7 @@ function default_settings() {
   LAN_NETMASK="255.255.255.0"
   LAN_VLAN=",tag=999"
   MTU=""
-  START_VM="yes"
+  START_VM="no"
   METHOD="default"
   echo -e "${DGN}Using Virtual Machine ID: ${BGN}${VMID}${CL}"
   echo -e "${DGN}Using Hostname: ${BGN}${HN}${CL}"
